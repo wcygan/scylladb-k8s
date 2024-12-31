@@ -4,7 +4,7 @@ racks:
     members: 3
     storage:
       capacity: 30Gi
-      storageClassName: rook-ceph-block
+      storageClassName: local-path # Probably need to update this after changing clusters
     resources:
       limits:
         cpu: 2       

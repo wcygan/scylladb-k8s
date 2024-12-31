@@ -1,6 +1,6 @@
 # ScyllaDB on Kubernetes
 
-Reference: https://operator.docs.scylladb.com/stable/installation/helm.html#scylla-manager-helm-chart
+Reference: https://operator.docs.scylladb.com/stable/installation/helm.html
 
 ```bash
 # Simply
