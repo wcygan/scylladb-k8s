@@ -1,0 +1,14 @@
+datacenter: dc1
+racks:
+  - name: rack1
+    members: 3
+    storage:
+      capacity: 30Gi
+      storageClassName: rook-ceph-block
+    resources:
+      limits:
+        cpu: 2       
+        memory: 4Gi  
+      requests:
+        cpu: 1
+        memory: 2Gi  

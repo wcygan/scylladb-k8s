@@ -1,0 +1,13 @@
+apiVersion: skaffold/v4beta1
+kind: Config
+metadata:
+  name: scylla-operator-config
+deploy:
+  helm:
+    releases:
+      - name: scylla-operator
+        repo: https://scylla-operator-charts.storage.googleapis.com/stable
+        remoteChart: scylla-operator
+        namespace: scylla-operator
+        createNamespace: true
+        version: v1.15.0

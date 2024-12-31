@@ -1,0 +1,18 @@
+apiVersion: skaffold/v4beta1
+kind: Config
+metadata:
+  name: scylladb-k8s
+
+requires:
+  - configs:
+      - cert-manager-config
+    path: cert-manager-config/skaffold.yaml
+  - configs:
+      - scylla-operator-config
+    path: scylla-operator-config/skaffold.yaml
+  - configs:
+      - scylla-config
+    path: scylla-config/skaffold.yaml
+  - configs:
+      - scylla-manager-config
+    path: scylla-manager-config/skaffold.yaml
