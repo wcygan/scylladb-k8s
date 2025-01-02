@@ -3,8 +3,8 @@ racks:
   - name: rack1
     members: 3
     storage:
-      capacity: 30Gi
-      storageClassName: local-path # Probably need to update this after changing clusters
+      capacity: 15Gi
+      storageClassName: openebs-hostpath
     resources:
       limits:
         cpu: 2       

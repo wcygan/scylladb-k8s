@@ -40,6 +40,14 @@ Insufficient Disk Space:
 - Error Message: ERROR:root:Filesystem at /var/lib/scylla/data has only 2977710080 bytes available; that is less than the recommended 10 GB. Please free up space and run scylla_io_setup again.
 ```
 
+I eventually was able to resolve this after re-creating my entire k8s cluster using Talos Linux and using this [guide](https://docs.scylladb.com/operating-scylla/procedures/setting-up-disk-storage/).
+
+```bash
+kubectl get storageclass
+NAME               PROVISIONER        RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
+openebs-hostpath   openebs.io/local   Delete          WaitForFirstConsumer   false                  94m
+```
+
 ## Trying from Docs
 
 - <https://www.scylladb.com/2021/05/11/using-helm-charts-to-deploy-scylla-on-kubernetes/>
