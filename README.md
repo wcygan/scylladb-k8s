@@ -19,6 +19,12 @@ If you already have cert-manager in your cluster, you can skip the first step.
 Check for the pods to be ready:
 
 ```bash
+kubectl get pods -n scylla
+NAME                 READY   STATUS    RESTARTS        AGE
+scylla-dc1-rack1-0   4/4     Running   1 (3d23h ago)   3d23h
+scylla-dc1-rack1-1   4/4     Running   1 (3d23h ago)   3d23h
+scylla-dc1-rack1-2   4/4     Running   9 (4h21m ago)   3d23h
+
 kubectl -n scylla-operator get all
 kubectl -n scylla get all
 ```
